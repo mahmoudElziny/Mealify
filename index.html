@@ -10,9 +10,32 @@
     <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dark.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">Mealify</h1>
+            <ul>
+                <li><a href="#home" class="home-link">Home</a></li>
+                <li><a href="#chefs" class="chefs-link">Chefs</a></li>
+                <li><a href="#gallery" class="gallery-link">Gallery</a></li>
+                <li><a href="#contact" class="contact-link">Contact</a></li>
+            </ul>
+            <div class="mode">
+                <label for="mode">
+                    <i class="fa-regular fa-sun light"></i>
+                </label>
+                <label for="mode">
+                    <i class="fa-solid fa-moon dark"></i>
+                </label>
+                <input id="mode" type="checkbox" hidden aria-hidden="true"/>
+            </div>
+        </div>
+    </nav>
+    
     <!-- Header -->
     <header class="home section-bg" id="home">
         <div class="container">
