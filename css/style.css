@@ -83,13 +83,13 @@ img{
 .btn {
     --background-color: transparent;
     --color: var(--color-light);
-    --padding: 5px 12px;
+    --padding: .3125rem 0.75rem;
     --border-width: 2px;
     --border-color: transparent;
     --border-radius:0px;
     --hover-bg-color: transparent;
     --hover-color: transparent;
-    --font-size: 16px;
+    --font-size: 1rem;
 
     padding: var(--padding);
     border: var(--border-width) solid var(--border-color);
@@ -109,7 +109,7 @@ img{
 .btn-main {
    --background-color: var(--color-primary);
    --border-radius: 0px 100vh 100vh 100vh;
-   --padding: 8px 20px;
+   --padding: .5rem 1.25rem;
    --font-size: 15px; 
    --hover-bg-color: hsl(
     var(--primary-hue),
@@ -122,7 +122,7 @@ img{
 /* Container */
 
 .container {
-    --padding: 40px 5px;
+    --padding: 2.5rem 0.3125rem;
     --margin-top: 0;
     --margin-bottom: 0;
 
@@ -132,6 +132,94 @@ img{
     margin-bottom: var(--margin-bottom);
     margin-inline: auto;
 }
+
+/* Navbar */
+
+nav {
+    background-color: var(--color-light);
+}
+
+nav .container {
+    --padding: 1.5625rem 0.3125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav .logo {
+    font-size: 30px;
+    font-family: var(--font-default);
+    cursor: pointer;
+}
+
+nav .logo::after {
+    content: ".";
+    color: var(--color-primary);
+
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    position: relative;
+    transition: color var(--animation-duration);
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    left: 0;
+    bottom: -3px;
+    transition: width var(--animation-duration);
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.mode i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.mode .light {
+   display: none;
+}
+
+body:not(:has(:target)) .home-link,
+body:has(.home:target) .home-link,
+body:has(.chefs:target) .chefs-link,
+body:has(.gallery:target) .gallery-link,
+body:has(.contact:target) .contact-link
+ {
+    color: #000;
+}
+
+body:not(:has(:target)) .home-link::before,
+body:has(.home:target) .home-link::before,
+body:has(.chefs:target) .chefs-link::before,
+body:has(.gallery:target) .gallery-link::before,
+body:has(.contact:target) .contact-link::before{
+    width: 100%;
+}
+
+
+
+
+
 
 /* Header */
 
@@ -194,20 +282,20 @@ header picture img:hover {
 .header-content h2 {
   color: var(--color-secondary);
   font-family: var(--font-primary);
-  font-size: 65px;
+  font-size: 4.0625rem;
 }
 
 .header-content p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #4f4f5a;
-  margin-block: 20px;
+  margin-block: 1.25rem;
   line-height: 1.6;
 }
 
 header .buttons-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 header .video-btn {
@@ -223,7 +311,7 @@ header .video-btn:hover {
 .video-btn .icon {
     width: 55px;
     height: 55px;
-    background-image: linear-gradient(to right, red 0% 50%, transparent 50% 100%);
+    background-image: linear-gradient(to right, var(--color-primary) 0% 50%, transparent 50% 100%);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -236,7 +324,7 @@ content: "";
 position: absolute;
 width: 40px;
 height: 40px;
-background-color: #fff;
+background-color: var(--color-light);
 border-radius: inherit;
 }
 
