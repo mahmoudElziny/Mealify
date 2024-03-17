@@ -137,8 +137,17 @@ img{
 
 nav {
     background-color: var(--color-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
+body:has(.nav-links:target) nav {
+    height: 100vh;
+    background-color: #fff5;
+}
 nav .container {
     --padding: 1.5625rem 0.3125rem;
     display: flex;
@@ -149,6 +158,11 @@ nav .container {
 nav ul {
     display: flex;
     gap: 30px;
+    transition: transform var(--animation-duration);
+}
+
+.nav-links:target {
+    transform: translateX(0);
 }
 
 nav .logo {
@@ -172,7 +186,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: #000; 
 }
 
 nav ul li a::before {
@@ -216,18 +230,37 @@ body:has(.contact:target) .contact-link::before{
     width: 100%;
 }
 
+.menu-icon {
+    font-size: 26px;
+    display: none;
+}
 
 
+nav ul li.close-icon {
+    display: none;
+    text-align: right;
+}
+
+nav ul li.close-icon a {
+    font-size: 25px;
+}
 
 
 
 /* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 header .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 84px;
 }
 
 header .container > * {

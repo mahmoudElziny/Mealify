@@ -17,8 +17,11 @@
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <h1 class="logo">Mealify</h1>
-            <ul>
+            <h1 class="logo"><a href="index.html">Mealify</a></h1>
+            <ul class="nav-links" id="navLinks">
+                <li class="close-icon"><a href="index.html">
+                    <i class="fa-solid fa-xmark"></i>
+                </a></li>
                 <li><a href="#home" class="home-link">Home</a></li>
                 <li><a href="#chefs" class="chefs-link">Chefs</a></li>
                 <li><a href="#gallery" class="gallery-link">Gallery</a></li>
@@ -33,6 +36,9 @@
                 </label>
                 <input id="mode" type="checkbox" hidden aria-hidden="true"/>
             </div>
+            <a href="#navLinks" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     
