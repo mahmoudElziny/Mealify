@@ -481,3 +481,55 @@ border-radius: inherit;
 .chefs .social-box i:hover {
     color: #37373fe6 ;
 }
+
+/* Gallery */
+.gallery-images {
+    --gap: 20px;
+    height: 1155px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--gap);
+    
+}
+
+.gallery-images picture {
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #fff;
+}
+
+.gallery-images picture:hover .layer{
+   top: 0;
+}
+
+.gallery-images picture:hover img {
+     scale: 1.1;
+}
+
+.gallery-images img {
+    width: 100%;
+    transition:  scale var(--animation-duration);
+}
+
+.gallery .layer {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000096;
+    color: #fff;
+    transition: top var(--animation-duration);
+}
+
+.gallery .layer p {
+   text-align: center;
+   margin-top: 10px;
+}
