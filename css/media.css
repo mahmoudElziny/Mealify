@@ -105,3 +105,18 @@ header .buttons-group {
     flex-direction: column;
 }
 }
+
+
+/* Chefs */
+
+@media screen and (max-width: 992px) {
+    .chefs-cards .card {
+        width: calc(calc(100% - var(--gab) ) / 2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chefs-cards .card {
+        width: 100%;
+    }
+}

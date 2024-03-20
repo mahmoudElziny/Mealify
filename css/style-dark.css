@@ -12,6 +12,14 @@
     --color-light-grey: #252525;
 } 
 
+body:has(.mode input:checked) {
+    background-color: #202020;
+}
+
+body:has(.mode input:checked) .card picture::before {
+    background-image: url(../images/team-shape-dark.svg);
+}
+
 
 body:not(:has(:target)):has(.mode input:checked)  .home-link,
 body:has(.home:target):has(.mode input:checked)  .home-link,
