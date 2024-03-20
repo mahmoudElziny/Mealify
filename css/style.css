@@ -647,7 +647,6 @@ border-radius: inherit;
  footer .container {
     --gap:20px;
     display: flex;
-    flex-wrap: wrap;
     gap: var(--gap);
  }
 
@@ -670,7 +669,7 @@ border-radius: inherit;
     height: 2.5rem;
  }
 
- footer.about p {
+ footer .about p {
     font-size: 17px;
     line-height: 1.5;
     margin-block: 10px;
@@ -708,16 +707,20 @@ border-radius: inherit;
 
  footer .subscription-box input {
     flex-grow: 1;
+    padding: 10px;
  }
 
  footer .subscription-box input:focus {
     outline: none;
-    padding: 10px;
  }
 
  footer .subscription-box button {
     --border-radius: 0px;
    min-width: 110px;
+ }
+
+ footer .subscription-box button i {
+    margin-right: 5px;
  }
 
  footer .quick-links ul {
