@@ -180,3 +180,16 @@ header .buttons-group {
         width: 100%;
     }
 }
+
+/* Contact */
+@media screen and (max-width: 992px) {
+    .contact .input-group input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact .contact-means > div {
+        width: 100%;
+    }
+}
